@@ -1,0 +1,14 @@
+volume_free_space = int(input()) * int(input()) * int(input())
+required_volume = 0
+
+while volume_free_space > required_volume:
+    baggage = input()
+
+    if baggage == "Done":
+        print(f"{volume_free_space - required_volume} Cubic meters left.")
+        break
+
+    required_volume += int(baggage)
+
+else:
+    print(f"No more free space! You need {required_volume - volume_free_space} Cubic meters more.")
